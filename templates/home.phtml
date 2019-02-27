@@ -1,0 +1,13 @@
+<h1>Agenda de contatos</h1>
+
+    <a href="http://localhost/slim/public/add">Adicionar Contato</a>
+
+    <?php if(!empty($msg)){
+        echo $msg;
+    }?>
+
+<ul>
+    <?php foreach($lista as $item):?>
+    <li><?php echo $item['nome'];?> - <?php echo $item['telefone'];?> - <a href="./edit/<?php echo $item['id']?>">Editar</a> - <a href="./del/<?php echo $item['id']?>">Excluir</a></li>
+    <?php endforeach;?>
+</ul>
